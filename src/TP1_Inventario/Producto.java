@@ -13,7 +13,6 @@ public class Producto {
         this.precio = precio;
         this.stock = stock;
     }
-
     public void venderUnidades(int cantidad) {   
             if (cantidad > 0 && cantidad <= stock) { 
                 stock -= cantidad;
@@ -25,9 +24,9 @@ public class Producto {
     public void reponerStock(int cantidad) {
           if (cantidad > 0) {
               stock += cantidad;
-              System.out.println("Reposición registrada: +" + cantidad + " unidades. Stock actual: " + stock);              
+              System.out.println("Reposicion registrada: +" + cantidad + " unidades. Stock actual: " + stock);              
           }else{
-              System.out.println("Error: cantidad inválida");
+              System.out.println("Error: cantidad invalida");
           }
     }
         
@@ -37,13 +36,13 @@ public class Producto {
         this.precio = precio;
         System.out.println("Precio actualizado de " + nombre + " de $" + precioAnterior + " -> $" + precio);
         }else{
-            System.out.println("Error: precio inválido");
+            System.out.println("Error: precio invalido");
         }
     }
     public void mostrarFicha() { 
         System.out.println("--- Ficha de producto ---\n" +
                    "Nombre: " + nombre + "\n" +
-                   "Código: " + codigo + "\n" +
+                   "Codigo: " + codigo + "\n" +
                    "Precio: $" + precio + "\n" +
                    "Stock: " + stock + "\n" +
                    "--------------------------" + "\n" );
